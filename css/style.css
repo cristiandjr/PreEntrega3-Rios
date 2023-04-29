@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: rgba(74, 85, 114, 0.555);
+}
+header {
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: grey;
+  -webkit-box-shadow: 0px 5px 11px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 5px 11px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 5px 11px 0px rgba(0,0,0,0.75);
+}
+header h1 {
+  padding: 1rem;
+  text-align: center;
+  letter-spacing: 1rem;
+}
+
+main {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+.contenedor-fianl {
+  display: flex;
+  gap: 1rem;
+  margin-top: 20px;
+
+}
+
+/* formulario */
+.cal-calorias {
+  width: 100%;
+}
+.cal-calorias legend {
+  font-size: 25px;
+  font-weight: bold;
+}
+.cal-calorias fieldset {
+  padding: 10px;
+  border: 1px solid black;
+  -webkit-box-shadow: 0px 5px 11px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 5px 11px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 5px 11px 0px rgba(0,0,0,0.75);
+}
+.cal-calorias label {
+  margin-top: 10px;
+}
+.cal-calorias input:not([type="radio"]), select {
+  width: 100%;
+  height: 30px;
+  font-size: 18px;
+  outline: none;
+}
+.cal-calorias .genero  {
+  display: flex;
+  gap: 20px;
+}
+.cal-calorias label {
+  display: block;
+}
+.cal-calorias .btn {
+  margin-top: 15px;
+  width: 100%;
+  font-size: 2rem;
+  letter-spacing: .5rem;
+  border-radius: .5rem;
+  border: none;
+  background-color: rgb(131, 236, 131);
+  transition: .2s all ease-in;
+  cursor: pointer;
+}
+.cal-calorias .btn:hover {
+  background-color: rgb(198, 235, 198);
+}
+
+/* resultado */
+.resultado {
+  width: 60%;
+  padding: .1rem;
+  height: 6rem;
+  background-color: orange;
+  -webkit-box-shadow: 0px 5px 11px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 5px 11px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 5px 11px 0px rgba(0,0,0,0.75);
+}
+
+/* estadisticas */
+.estadisticas {
+  width: 50%;
+}
+.ultimos {
+  font-weight: 900;
+}
+
+/* spinner */
+.carga {
+  text-align: center;
+}
+.ring {
+  --uib-size: 60px;
+  --uib-speed: 2s;
+  --uib-color: black;
+  height: var(--uib-size);
+  width: var(--uib-size);
+  vertical-align: middle;
+  transform-origin: center;
+  animation: rotate var(--uib-speed) linear infinite;
+}
+.ring circle {
+  fill: none;
+  stroke: var(--uib-color);
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  animation: stretch calc(var(--uib-speed) * 0.75) ease-in-out infinite;
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes stretch {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 200;
+    stroke-dashoffset: -35px;
+  }
+  100% {
+    stroke-dashoffset: -124px;
+  }
+}
